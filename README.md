@@ -25,16 +25,16 @@ You pick any NSE stocks, set your weights and investment amount — and the app 
 ## 🖼️ Dashboard Preview
 
 ### Portfolio Snapshot
-![Portfolio Snapshot](D:\portfolio_risk_dashboard\Screenshots\Screenshot-1.png)
+![Portfolio Snapshot](Screenshots/Screenshot-1.png)
 
 ### Risk Analytics
-![Risk Analytics](D:\portfolio_risk_dashboard\Screenshots\Screenshot-2.png)
+![Risk Analytics](Screenshots/Screenshot-2.png)
 
 ### Monte Carlo Simulation
-![Monte Carlo](D:\portfolio_risk_dashboard\Screenshots\Screenshot-3.png)
+![Monte Carlo](Screenshots/Screenshot-3.png)
 
 ### Efficient Frontier
-![Efficient Frontier](D:\portfolio_risk_dashboard\Screenshots\Screenshot-4.png)
+![Efficient Frontier](Screenshots/Screenshot-4.png)
 
 ---
 
@@ -100,7 +100,7 @@ You pick any NSE stocks, set your weights and investment amount — and the app 
 ## 📁 Project Structure
 
 ```
-portfolio_risk_dashboard/
+portfolio-risk-dashboard/
 │
 ├── app.py                        # Main Streamlit dashboard (7 sections)
 │
@@ -118,6 +118,12 @@ portfolio_risk_dashboard/
 │   ├── __init__.py
 │   ├── sentiment.py              # Wikipedia + FinBERT sentiment pipeline
 │   └── ai_summary.py            # Hugging Face Mistral-7B risk commentary
+│
+├── Screenshots/
+│   ├── Screenshot-1.png          # Portfolio Snapshot
+│   ├── Screenshot-2.png          # Risk Analytics
+│   ├── Screenshot-3.png          # Monte Carlo Simulation
+│   └── Screenshot-4.png          # Efficient Frontier
 │
 ├── requirements.txt              # Python dependencies
 ├── .env.example                  # Template for environment variables
