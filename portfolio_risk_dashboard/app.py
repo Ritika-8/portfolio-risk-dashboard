@@ -4,6 +4,7 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
+
 from data.stock_data import fetch_stock_data, fetch_benchmark, NSE_STOCKS
 from analytics.returns import (
     compute_daily_returns, compute_cumulative_returns,
@@ -154,14 +155,18 @@ with col1:
         cum_b = compute_cumulative_returns(aligned_bench.to_frame("Nifty 50")) * 100
         all_cum = pd.concat([all_cum, cum_b], axis=1)
     fig = px.line(all_cum, title="Cumulative Returns (%)",
-                  labels={"value": "Return (%)", "index": "Date", "variable": "Stock"})
+                  labels={"value": "Return (%)", "index": "Date", "variable": "Stock"}, 
+                  render_mode="svg"
+                )
     fig.update_layout(height=360)
     st.plotly_chart(fig, use_container_width=True)
 
 with col2:
     roll_vol = compute_rolling_volatility(returns, window=30) * 100
     fig2 = px.line(roll_vol, title="30-Day Rolling Volatility (%)",
-                   labels={"value": "Volatility (%)", "index": "Date", "variable": "Stock"})
+                   labels={"value": "Volatility (%)", "index": "Date", "variable": "Stock"},
+                   render_mode="svg"
+                )
     fig2.update_layout(height=360)
     st.plotly_chart(fig2, use_container_width=True)
 
