@@ -1,0 +1,25 @@
+# Secret keys — NEVER upload these
+.env
+
+# Python cache files — not needed on GitHub
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment — too large to upload
+venv/
+venv311/
+env/
+.venv/
+
+# VS Code settings
+.vscode/
+
+# Windows files
+.DS_Store
+Thumbs.db
+
+# Streamlit cache
+.streamlit/secrets.toml
